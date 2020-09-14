@@ -6,6 +6,11 @@
 #include <iomanip>
 using namespace std;
 
+void ClearScreen() {
+  for (int i=0; i<10; i++)
+    cout << endl << endl << endl << endl << endl;
+}
+
 int main(int argc, char const *argv[])
 {
   ifstream fin("words.txt");
@@ -45,7 +50,7 @@ int main(int argc, char const *argv[])
   }
   cout << "Are you ready for the next step?" << endl;
   cin.get();
-
+  ClearScreen();
   vWr.clear();
   right=0;
   wrong=0;
