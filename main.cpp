@@ -30,6 +30,7 @@ int main(int argc, char const *argv[])
   int right=0;
   int wrong=0;
   std::vector<pair<string, string>> vWr;
+  std::vector<string> vMemWr;
   for (int i=0; i<v.size(); i++) {
     cout << setw(2) << i+1 << ": " << v[i].first << " ";
     string str;
@@ -38,6 +39,7 @@ int main(int argc, char const *argv[])
     else {
       wrong++;
       vWr.push_back(make_pair(v[i].first, v[i].second));
+      vMemWr.push_back(str);
     }
   }
   cout << endl << "right: " << right << ", wrong: " << wrong << endl;
@@ -45,13 +47,15 @@ int main(int argc, char const *argv[])
   if (wrong > 0) {
     cout << "Wrongs: " << endl;
     for (int i=0; i< vWr.size(); i++) {
-      cout << setw(2) << i+1 << ": " << vWr[i].first << ", " << vWr[i].second << endl;
+      cout << setw(2) << i+1 << ": " << vWr[i].first << ", " << vWr[i].second << ", "
+           << vMemWr[i] << endl;
     }
   }
   cout << "Are you ready for the next step?" << endl;
   cin.get();
   ClearScreen();
   vWr.clear();
+  vMemWr.clear();
   right=0;
   wrong=0;
   for (int i=0; i<v.size(); i++) {
@@ -62,6 +66,7 @@ int main(int argc, char const *argv[])
     else {
       wrong++;
       vWr.push_back(make_pair(v[i].first, v[i].second));
+      vMemWr.push_back(str);
     }
   }
   cout << endl << "right: " << right << ", wrong: " << wrong << endl;
@@ -69,7 +74,8 @@ int main(int argc, char const *argv[])
   if (wrong > 0) {
     cout << "Wrongs: " << endl;
     for (int i=0; i< vWr.size(); i++) {
-      cout << setw(2) << i+1 << ": " << vWr[i].first << ", " << vWr[i].second << endl;
+      cout << setw(2) << i+1 << ": " << vWr[i].first << ", " << vWr[i].second << ", "
+           << vMemWr[i] << endl;
     }
   }
 
