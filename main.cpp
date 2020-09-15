@@ -13,7 +13,9 @@ void ClearScreen() {
 
 int main(int argc, char const *argv[])
 {
-  ifstream fin("words.txt");
+  string fileName;
+  cout << "Type input file name: "; cin >> fileName;
+  ifstream fin(fileName.c_str());
   if (!fin.is_open()) {
     cerr << "Can't read input txt!" << endl;
     return -1;
