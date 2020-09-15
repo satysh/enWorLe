@@ -14,19 +14,25 @@ void ClearScreen() {
 int main(int argc, char const *argv[])
 {
   string fileName;
-  cout << "Type input file name: "; cin >> fileName;
-  ifstream fin(fileName.c_str());
-  if (!fin.is_open()) {
-    cerr << "Can't read input txt!" << endl;
-    return -1;
+  ifstream fin;
+  bool fileFindFlag=false;
+  while (!fileFindFlag) {
+    cout << "Type input file name: "; cin >> fileName;
+    fin.open(fileName.c_str());
+    if (!fin.is_open()) {
+      cerr << "Can't read input txt: " << fileName << endl;
+      continue;
+    }
+    fileFindFlag=true;
   }
-
   std::vector<pair<string, string>> v;
+  std::vector<string> vTrancript;
   while (!fin.eof()) {
-    string str1, str2;
-    fin >> str1 >> str2;
+    string str1, str2, str3;
+    fin >> str1 >> str2 >> str3;
     if (fin.eof()) break; // to skip the last empty string
     v.push_back(make_pair(str1, str2));
+    vTrancript.push_back(str3);
   }
 
   int right=0;
@@ -34,7 +40,7 @@ int main(int argc, char const *argv[])
   std::vector<pair<string, string>> vWr;
   std::vector<string> vMemWr;
   for (int i=0; i<v.size(); i++) {
-    cout << setw(2) << i+1 << ": " << v[i].first << " ";
+    cout << setw(2) << i+1 << ": " << v[i].first << " " << vTrancript[i] << " ";
     string str;
     cin >> str;
     if (str == v[i].second) right++;

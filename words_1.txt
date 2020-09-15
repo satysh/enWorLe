@@ -1,9 +1,9 @@
-satellite спутник
-learn_out узнать
-extension расширение
-purpose цель
-accord согласие
-spend тратить
-bottom дно
-conclude заключить
-particular особый
+satellite спутник сателайт
+learn_out узнать лён_аут
+extension расширение экстешен
+purpose цель пёрпоус
+accord согласие экорт
+spend тратить спэнд
+bottom дно ботэм
+conclude заключить кэнклуд
+particular особый партикюлар
