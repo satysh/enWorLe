@@ -10,9 +10,11 @@ void ClearScreen() {
   for (int i=0; i<10; i++)
     cout << endl << endl << endl << endl << endl;
 }
+void checkDate();
 
 int main(int argc, char const *argv[])
 {
+  checkDate();
   string fileName;
   ifstream fin;
   bool fileFindFlag=false;
@@ -89,4 +91,21 @@ int main(int argc, char const *argv[])
 
   cout << "The end!" << endl;
   return 0;
+}
+
+void checkDate() {
+  ifstream fin("date.txt");
+  if (!fin.is_open()) {
+    cerr << "Can't read date.txt!" << endl;
+    return;
+  }
+  while (!fin.eof()) {
+    string str;
+    for (int i=0; i<7; i++) {
+      fin >> str;
+      cout << setw(12) << str << " ";
+    }
+    cout << endl;
+  }
+  fin.close();
 }
