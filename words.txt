@@ -48,5 +48,3 @@ appearance внешность
 qualitative качественный
 clog засорять
 fear страх
-
-

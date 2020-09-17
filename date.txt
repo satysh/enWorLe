@@ -1,4 +1,5 @@
 file 30_min 3_h 8_h 1_d 9_d 27_d
 words.txt done done done done 22.09.20 10.10.20
-words_1.txt done done non non 24.09.20 12.10.20
-words_2.txt non non non non non non
+words_1.txt done done done non 24.09.20 12.10.20
+words_2.txt done non non non 26.09.20 14.10.20
+words_3.txt non non non non non non
