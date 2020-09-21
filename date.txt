@@ -3,3 +3,4 @@ words.txt done done done done 22.09.20 10.10.20
 words_1.txt done done done done 24.09.20 12.10.20
 words_2.txt done non done done 26.09.20 14.10.20
 words_3.txt non done done done 27.09.20 15.10.20
+words_4.txt done non non non non non
